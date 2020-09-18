@@ -1,0 +1,54 @@
+<ion-content>
+  <ion-grid>
+    <ion-row class="ion-justify-content-start">
+      <ion-col size="12">
+        <div>
+          <br />
+          <ion-icon class="custom-back" color="secondary"></ion-icon><br />
+
+         <ion-text color="secondary">
+          <h1 >Login</h1>
+         </ion-text>
+          <br /><br />
+
+          <ion-item lines="full">
+            <ion-input color="secondary"
+              type="text"
+              placeholder="Email"
+              required
+            ></ion-input> </ion-item
+          ><br />
+
+          <ion-item lines="full" >
+            <ion-icon class="custom-hide" slot="end" color="secondary"></ion-icon>
+            <ion-input
+            color="secondary"
+              type="password"
+              placeholder="Password"
+              required
+            ></ion-input> </ion-item
+          ><br />
+
+          <ion-row>
+            <ion-col>
+              <ion-button
+                expand="block"
+                type="submit"
+                color="primary"
+                size="small"
+                shape="round"
+                (click)='goTo()'
+                >Login</ion-button
+              ><br />
+              <div class="ion-text-center">
+                <ion-text color="danger" [routerLink]="['/forgot-password']"
+                  >Forgot Password?</ion-text
+                >
+              </div>
+            </ion-col>
+          </ion-row>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

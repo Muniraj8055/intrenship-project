@@ -1,0 +1,30 @@
+:host {
+  ion-button {
+    width: 220px;
+    margin: auto;
+  }
+}
+.forgot-pass {
+  ion-text {
+    font-size: 13px;
+    margin-left: 65px;
+  }
+}
+
+ion-icon {
+  &[class*="custom-"] {
+    mask-size: contain;
+    mask-position: 50% 50%;
+    mask-repeat: no-repeat;
+    background: currentColor;
+    width: 20px;
+    height: 20px;
+  }
+
+  &[class*="custom-back"] {
+    mask-image: url("../assets/back.svg");
+  }
+  &[class*="custom-hide"] {
+    mask-image: url("../assets/hide.svg");
+  }
+}

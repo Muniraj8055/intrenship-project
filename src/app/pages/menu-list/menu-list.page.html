@@ -1,0 +1,29 @@
+<ion-app>
+  <div class="header-content">
+    <img
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSapvfl9SKUqsPryLW9lUMwCH-zq32hTAjaEQ&usqp=CAU"
+      alt=""
+    />
+    <ion-label color="secondary">Josef</ion-label>
+  </div>
+  <div >
+    <ion-list class="menu-items" lines="none">
+     
+      <ion-item>
+        <ion-icon class="custom-manage-order" ></ion-icon>
+        <ion-label color ="secondary" >Manage Orders</ion-label>
+      </ion-item>
+   
+    <ion-nav-link routerDirection="forward" [component]="nextPage">
+      <ion-item>
+        <ion-icon class="custom-profile" ></ion-icon>
+        <ion-label color="secondary">Profile</ion-label>
+      </ion-item>
+    </ion-nav-link>
+      <ion-item>
+        <ion-icon class="custom-logout" ></ion-icon>
+        <ion-label color="secondary">logout</ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-app>

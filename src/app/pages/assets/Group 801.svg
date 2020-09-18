@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.886" y1="0.741" x2="0.118" y2="0.282" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#17554e"/>
+      <stop offset="1" stop-color="#172d3e"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_801" data-name="Group 801" transform="translate(-2100 -264)">
+    <circle id="Ellipse_50" data-name="Ellipse 50" cx="16" cy="16" r="16" transform="translate(2100 264)" fill="url(#linear-gradient)"/>
+    <g id="phone_1_" data-name="phone (1)" transform="translate(2109.461 274)">
+      <g id="Group_800" data-name="Group 800" transform="translate(0.539 0)">
+        <path id="Path_1005" data-name="Path 1005" d="M12.176,8.789,10.5,7.117a1.112,1.112,0,0,0-1.85.418,1.137,1.137,0,0,1-1.313.716,5.153,5.153,0,0,1-3.1-3.1,1.082,1.082,0,0,1,.716-1.313,1.112,1.112,0,0,0,.418-1.85L3.7.313a1.192,1.192,0,0,0-1.612,0L.955,1.447C-.179,2.641,1.074,5.8,3.88,8.61s5.969,4.118,7.162,2.925L12.176,10.4A1.192,1.192,0,0,0,12.176,8.789Z" transform="translate(-0.539 0)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>
