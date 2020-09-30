@@ -6,47 +6,63 @@
           <br />
           <ion-icon class="custom-back" color="secondary"></ion-icon><br />
 
-         <ion-text color="secondary">
-          <h1 >Login</h1>
-         </ion-text>
+          <ion-text color="secondary">
+            <h1>Login</h1>
+          </ion-text>
           <br /><br />
 
-          <ion-item lines="full">
-            <ion-input color="secondary"
-              type="text"
-              placeholder="Email"
-              required
-            ></ion-input> </ion-item
-          ><br />
-
-          <ion-item lines="full" >
-            <ion-icon class="custom-hide" slot="end" color="secondary"></ion-icon>
-            <ion-input
-            color="secondary"
-              type="password"
-              placeholder="Password"
-              required
-            ></ion-input> </ion-item
-          ><br />
-
-          <ion-row>
-            <ion-col>
-              <ion-button
-                expand="block"
-                type="submit"
-                color="primary"
-                size="small"
-                shape="round"
-                (click)='goTo()'
-                >Login</ion-button
-              ><br />
-              <div class="ion-text-center">
-                <ion-text color="danger" [routerLink]="['/forgot-password']"
-                  >Forgot Password?</ion-text
+          <br />
+          <form (ngSubmit)="login()" [formGroup]="credentials">
+            <div class="input-group">
+              <ion-item>
+                <ion-input
+                  type="email"
+                  placeholder="Email"
+                  formControlName="email"
+                ></ion-input>
+              </ion-item>
+              <div
+                *ngIf="(email.dirty || email.touched) && email.errors"
+                class="errors"
+              >
+                <span *ngIf="email.errors?.required">Email is required</span>
+                <span *ngIf="email.errors?.email">Email is invalid</span>
+              </div>
+              <ion-item>
+                <ion-input
+                  type="password"
+                  placeholder="Password"
+                  formControlName="password"
+                ></ion-input>
+              </ion-item>
+              <div
+                *ngIf="(password.dirty || password.touched) && password.errors"
+                class="errors"
+              >
+                <span *ngIf="password.errors?.required"
+                  >Password is required</span
+                >
+                <span *ngIf="password.errors?.minlength"
+                  >Password needs to be 6 characters</span
                 >
               </div>
-            </ion-col>
-          </ion-row>
+            </div> <br>
+
+            <ion-button
+              type="submit"
+              expand="block"
+              size="small"
+              shape="round"
+              [disabled]="!credentials.valid"
+              (click)="login()"
+              >LogIn</ion-button
+            ><br>
+          </form>
+          <div class="ion-text-center">
+            <ion-text color="danger" [routerLink]="['/forgot-password']"
+              >Forgot Password?</ion-text
+            >
+          </div>
         </div>
       </ion-col>
     </ion-row>

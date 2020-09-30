@@ -1,5 +1,6 @@
 import { NgModule } from "@angular/core";
 import { PreloadAllModules, RouterModule, Routes } from "@angular/router";
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   {
@@ -18,16 +19,13 @@ const routes: Routes = [
       import("./pages/forgot-password/forgot-password.module").then(
         (m) => m.ForgotPasswordPageModule
       ),
-  }
-
-  
-  ,
-  {
-    path: 'menu',
-    loadChildren: () => import('./pages/menu/menu.module').then( m => m.MenuPageModule)
   },
 
- 
+  {
+    path: "menu",
+    loadChildren: () =>
+      import("./pages/menu/menu.module").then((m) => m.MenuPageModule), canLoad: [AuthGuard]
+  },
 ];
 
 @NgModule({

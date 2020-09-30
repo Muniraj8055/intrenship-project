@@ -1,5 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { ProfilePage } from "../profile/profile.page";
+import { AuthenticationService } from 'src/app/services/authentication.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: "app-menu-list",
@@ -9,7 +11,11 @@ import { ProfilePage } from "../profile/profile.page";
 export class MenuListPage implements OnInit {
   nextPage = ProfilePage;
 
-  constructor() {}
+  constructor(private authService: AuthenticationService, private router: Router) {}
 
   ngOnInit() {}
+  async logout() {
+    await this.authService.logout();
+    this.router.navigateByUrl('/', { replaceUrl: true });
+  }
 }
